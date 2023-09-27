@@ -5,9 +5,11 @@ using UnityEngine;
 public class StoreElements : MonoBehaviour
 {
     [SerializeField]
-    ScriptableObject[] heads, shoulders, weapon, pants, boots;
+    ItemData[] heads, shoulders, weapon, pants, boots;
     [SerializeField]
-    GameObject prefab;
+    GameObject prefab,parent;
+    [SerializeField]
+    List <GameObject> items=new List<GameObject>();
      public int basicpool;
     public enum typeelment
     {
@@ -29,13 +31,55 @@ public class StoreElements : MonoBehaviour
     {
         for (int i = 0; i < basicpool; i++)
         {
-            var prefabInstance = Instantiate(prefab);
+            var prefabInstance = Instantiate(prefab, parent.transform);
             prefabInstance.SetActive(false);
+            items.Add(prefabInstance);
         }
     
     }
-    public void Menus()
+    public void Menushead( )
     {
-
+        for (int i = 0; i < heads.Length; i++)
+        {
+            items[i].GetComponent<ItemInfo>().myscritable = heads[i];
+            items[i].GetComponent<ItemInfo>().UpdateData();
+            items[i].SetActive(true);
+        }
+    }
+    public void MenusSholder()
+    {
+        for (int i = 0; i < shoulders.Length; i++)
+        {
+            items[i].GetComponent<ItemInfo>().myscritable = shoulders[i];
+            items[i].GetComponent<ItemInfo>().UpdateData();
+            items[i].SetActive(true);
+        }
+    }
+    public void Menusweapon()
+    {
+        for (int i = 0; i < weapon.Length; i++)
+        {
+            items[i].GetComponent<ItemInfo>().myscritable = weapon[i];
+            items[i].GetComponent<ItemInfo>().UpdateData();
+            items[i].SetActive(true);
+        }
+    }
+    public void MenusPants()
+    {
+        for (int i = 0; i < pants.Length; i++)
+        {
+            items[i].GetComponent<ItemInfo>().myscritable = pants[i];
+            items[i].GetComponent<ItemInfo>().UpdateData();
+            items[i].SetActive(true);
+        }
+    }
+    public void MenusBoots()
+    {
+        for (int i = 0; i < boots.Length; i++)
+        {
+            items[i].GetComponent<ItemInfo>().myscritable = boots[i];
+            items[i].GetComponent<ItemInfo>().UpdateData();
+            items[i].SetActive(true);
+        }
     }
 }
