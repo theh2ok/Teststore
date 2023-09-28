@@ -7,4 +7,5 @@ public static class Aciones
 
     // public static Action<int> Globalgold;
     public static Action Globalgold;
+    public static Action<int,int> ItemUpdate;
 }

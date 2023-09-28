@@ -5,7 +5,7 @@ using UnityEngine;
 public class StoreElements : MonoBehaviour
 {
     [SerializeField]
-    ItemData[] heads, shoulders, weapon, pants, boots,chest;
+    DataItem[] heads, shoulders, weapon, pants, boots,chest;
     [SerializeField]
     GameObject prefab,parent;
     [SerializeField]

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d0563adbd8fce498fb64ca3fe43bdb, type: 3}
   m_Name: shoulder 4
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 1fc676d28652ff445a6b6f15e038061f, type: 3}
   buyprice: 100
   Sellprice: 50
   Ownned: 0

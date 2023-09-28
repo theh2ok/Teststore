@@ -867,6 +867,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1664282082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 732868993996235052, guid: 34c983fe0219b764e80cfa0321fb99da,
+    type: 3}
+  m_PrefabInstance: {fileID: 731872282403765474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1664282086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664282082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74d4a9a11d0965469a5a1b577257ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myskin: {fileID: 0}
+  head: {fileID: 0}
+  sholder1: {fileID: 0}
+  sholder2: {fileID: 0}
+  weapon: {fileID: 0}
+  legs: {fileID: 0}
+  chest: {fileID: 0}
+  boots1: {fileID: 0}
+  boots2: {fileID: 0}
 --- !u!114 &1850377169 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6235882429799448921, guid: 433cabecea2cc744995058bb8a6349e4,

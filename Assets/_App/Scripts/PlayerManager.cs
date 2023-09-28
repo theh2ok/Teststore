@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class DataPlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     public static int gold;
     public TextMeshPro mygold;
