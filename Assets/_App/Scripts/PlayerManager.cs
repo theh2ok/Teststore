@@ -7,10 +7,10 @@ using System;
 public class PlayerManager : MonoBehaviour
 {
     public static int gold;
-
+    int extragold=0;
     public TextMeshPro mygold;
- 
-   
+    public TextMeshProUGUI mygoldUI;
+    public GameObject UIelemetgoldUI;
     [SerializeField]
     int InitialGold;
     private void OnEnable()
@@ -24,16 +24,18 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         gold = InitialGold;
-        UPdateGold();
+        UPdateGold(extragold);
     }
    
 
     // Start is called before the first frame update
 
-    void UPdateGold()
+    void UPdateGold(int goldextra)
     {
-        
-       mygold.text = "" + gold;    
+        var totalgold = gold + goldextra;
+       mygold.text = "" + totalgold;
+        mygoldUI.text = "" + totalgold;
+        UIelemetgoldUI.SetActive(true);
     }
 
    

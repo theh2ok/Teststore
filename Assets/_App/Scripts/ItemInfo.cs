@@ -13,7 +13,7 @@ public class ItemInfo : MonoBehaviour
     public TextMeshProUGUI Sellpricetext;
     public bool Ownned;
     [SerializeField]
-    GameObject buyprice, sellprice;
+    GameObject buyprice, sellprice,WearIt;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +29,7 @@ public class ItemInfo : MonoBehaviour
         Ownned = myscritable.Ownned;
         buyprice.SetActive(true);
         sellprice.SetActive(false);
+        WearIt.SetActive(false);
         ItemUIUpdate();
     }
     public void ItemUIUpdate()
@@ -37,12 +38,16 @@ public class ItemInfo : MonoBehaviour
         if (Ownned)
         {
             sellprice.SetActive(true);
+            WearIt.SetActive(true);
             buyprice.SetActive(false);
+          
         }
         else
         {
+            WearIt.SetActive(false);
             sellprice.SetActive(false);
             buyprice.SetActive(true);
+           
         }
     }
         public void buyItem()
@@ -51,7 +56,7 @@ public class ItemInfo : MonoBehaviour
         if (PlayerManager.gold >= myscritable.buyprice)
               {
             PlayerManager.gold -= myscritable.buyprice;
-            Aciones.Globalgold();
+            Aciones.Globalgold(0);
             myscritable.Ownned = true;
             Aciones.ItemUpdate(myscritable.myIDPart, myscritable.ID);
             ItemUIUpdate();
@@ -61,10 +66,17 @@ public class ItemInfo : MonoBehaviour
     {
        
             PlayerManager.gold += myscritable.Sellprice;
-            Aciones.Globalgold();
+            Aciones.Globalgold(0);
             myscritable.Ownned = false;
             Aciones.ItemUpdate(myscritable.myIDPart, 0);
             ItemUIUpdate();
    
+    }
+    public void Wearitem()
+    {
+
+        Aciones.ItemUpdate(myscritable.myIDPart, myscritable.ID);
+        ItemUIUpdate();
+
     }
 }
