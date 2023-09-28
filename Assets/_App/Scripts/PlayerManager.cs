@@ -7,7 +7,10 @@ using System;
 public class PlayerManager : MonoBehaviour
 {
     public static int gold;
+
     public TextMeshPro mygold;
+ 
+   
     [SerializeField]
     int InitialGold;
     private void OnEnable()
@@ -23,6 +26,8 @@ public class PlayerManager : MonoBehaviour
         gold = InitialGold;
         UPdateGold();
     }
+   
+
     // Start is called before the first frame update
 
     void UPdateGold()

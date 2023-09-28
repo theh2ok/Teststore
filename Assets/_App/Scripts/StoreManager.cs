@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class StoreManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool StoreAvalible = false;
+    public GameObject myStore,mysingStore;
 
-    // Update is called once per frame
-    void Update()
+    public void stateStore(bool state)
     {
-        
+        StoreAvalible = state;
+        mysingStore.SetActive(state);
+    }
+    public void EnabledStore()
+    {
+        if (StoreAvalible)
+        {
+            myStore.SetActive(true);
+          
+        }
+
     }
 }

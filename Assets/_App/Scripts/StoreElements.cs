@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class StoreElements : MonoBehaviour
 {
+    public UnityEvent OnstoreOn;
     [SerializeField]
     DataItem[] heads, shoulders, weapon, pants, boots,chest;
     [SerializeField]
@@ -26,11 +28,15 @@ public class StoreElements : MonoBehaviour
     {
         generatedItem();
     }
+    private void OnEnable()
+    {
+        OnstoreOn.Invoke();
+    }
     void closeAll()
     {
         foreach (var item in items)
         {
-            enabled = false;
+            item.SetActive(false);
         }
     }
      void generatedItem()
