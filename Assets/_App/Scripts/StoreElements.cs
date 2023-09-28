@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class StoreElements : MonoBehaviour
 {
-    public UnityEvent OnstoreOn;
+    public UnityEvent OnstoreOn,OnsteoreDisable;
     [SerializeField]
     DataItem[] heads, shoulders, weapon, pants, boots,chest;
     [SerializeField]
@@ -31,6 +31,10 @@ public class StoreElements : MonoBehaviour
     private void OnEnable()
     {
         OnstoreOn.Invoke();
+    }
+    private void OnDisable()
+    {
+        OnsteoreDisable.Invoke();
     }
     void closeAll()
     {

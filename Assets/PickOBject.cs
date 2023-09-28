@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickOBject : MonoBehaviour
 {
     public int gold;
+
     // Start is called before the first frame update
     void Start()
     {
