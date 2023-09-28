@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d0563adbd8fce498fb64ca3fe43bdb, type: 3}
   m_Name: head
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 20eb058aea3c3a744bb5d47a1610550a, type: 3}
-  buyprice: 100
-  sellprice: 50
+  icon: {fileID: 21300000, guid: a39815610af62ce428093e599a8ea5e2, type: 3}
+  buyprice: 500
+  sellprice: 100
   Ownned: 0

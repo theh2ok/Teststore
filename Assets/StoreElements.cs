@@ -5,7 +5,7 @@ using UnityEngine;
 public class StoreElements : MonoBehaviour
 {
     [SerializeField]
-    ItemData[] heads, shoulders, weapon, pants, boots;
+    ItemData[] heads, shoulders, weapon, pants, boots,chest;
     [SerializeField]
     GameObject prefab,parent;
     [SerializeField]
@@ -26,7 +26,13 @@ public class StoreElements : MonoBehaviour
     {
         generatedItem();
     }
-
+    void closeAll()
+    {
+        foreach (var item in items)
+        {
+            enabled = false;
+        }
+    }
      void generatedItem()
     {
         for (int i = 0; i < basicpool; i++)
@@ -39,6 +45,7 @@ public class StoreElements : MonoBehaviour
     }
     public void Menushead( )
     {
+        closeAll();
         for (int i = 0; i < heads.Length; i++)
         {
             items[i].GetComponent<ItemInfo>().myscritable = heads[i];
@@ -48,6 +55,7 @@ public class StoreElements : MonoBehaviour
     }
     public void MenusSholder()
     {
+        closeAll();
         for (int i = 0; i < shoulders.Length; i++)
         {
             items[i].GetComponent<ItemInfo>().myscritable = shoulders[i];
@@ -57,6 +65,7 @@ public class StoreElements : MonoBehaviour
     }
     public void Menusweapon()
     {
+        closeAll();
         for (int i = 0; i < weapon.Length; i++)
         {
             items[i].GetComponent<ItemInfo>().myscritable = weapon[i];
@@ -64,8 +73,19 @@ public class StoreElements : MonoBehaviour
             items[i].SetActive(true);
         }
     }
+    public void MenusChest()
+    {
+        closeAll();
+        for (int i = 0; i < chest.Length; i++)
+        {
+            items[i].GetComponent<ItemInfo>().myscritable = chest[i];
+            items[i].GetComponent<ItemInfo>().UpdateData();
+            items[i].SetActive(true);
+        }
+    }
     public void MenusPants()
     {
+        closeAll();
         for (int i = 0; i < pants.Length; i++)
         {
             items[i].GetComponent<ItemInfo>().myscritable = pants[i];
@@ -75,6 +95,7 @@ public class StoreElements : MonoBehaviour
     }
     public void MenusBoots()
     {
+        closeAll();
         for (int i = 0; i < boots.Length; i++)
         {
             items[i].GetComponent<ItemInfo>().myscritable = boots[i];

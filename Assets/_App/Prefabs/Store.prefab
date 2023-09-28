@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5490166845913530768}
   - component: {fileID: 6235882429799448921}
   m_Layer: 25
-  m_Name: Text (TMP)
+  m_Name: Text Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -668,7 +668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -62.813396}
+  m_AnchoredPosition: {x: 0, y: 0.000011444092}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8964449101370112647
@@ -1178,7 +1178,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1674e72e2b242894c8c18a213f0e5535, type: 2}
   - {fileID: 11400000, guid: 366e4754a7717894f96bb9506c9685d8, type: 2}
   - {fileID: 11400000, guid: b874089ed3312374f8b7149c39816e96, type: 2}
+  chest: []
   prefab: {fileID: 8768046408806301248, guid: 7a67b6d10d2ea19478e7c8d5dc9a1594, type: 3}
+  parent: {fileID: 0}
+  items: []
   basicpool: 10
   myList: 0
 --- !u!1 &3290117328279253899
@@ -2678,8 +2681,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4131768013153087695}
   m_HandleRect: {fileID: 5727960825124971644}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.635
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
