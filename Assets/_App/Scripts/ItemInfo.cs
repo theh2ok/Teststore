@@ -17,7 +17,7 @@ public class ItemInfo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
+        UpdateData();
     }
    public void UpdateData()
     {
@@ -27,27 +27,35 @@ public class ItemInfo : MonoBehaviour
         Sellpricetext.text   =""+myscritable.Sellprice       ;
         Ownned = myscritable.Ownned;
         buyprice.SetActive(true);
+        ItemUIUpdate();
+    }
+    public void ItemUIUpdate()
+    {
         if (Ownned)
         {
             sellprice.SetActive(true);
             buyprice.SetActive(false);
         }
     }
- 
         public void buyItem()
         {
-         //   if (DataPlayerManager.gold > myscritable.buyprice)
-                 {
-          //      DataPlayerManager.gold -= myscritable.buyprice;
-                myscritable.Ownned = true;
-            }
+        Debug.Log("buying "+ DataPlayerManager.gold+"loque vale "+ myscritable.buyprice);
+        if (DataPlayerManager.gold > myscritable.buyprice)
+              {
+            DataPlayerManager.gold -= myscritable.buyprice;
+            Aciones.Globalgold();
+            myscritable.Ownned = true;
+            ItemUIUpdate();
         }
+          }
     public void SellItem()
     {
-       // if (DataPlayerManager.gold > myscritable.buyprice)
+        if (DataPlayerManager.gold > myscritable.Sellprice)
         {
-       //     DataPlayerManager.gold += myscritable.Sellprice;
+            DataPlayerManager.gold += myscritable.Sellprice;
+            Aciones.Globalgold();
             myscritable.Ownned = false;
+            ItemUIUpdate();
         }
     }
 }

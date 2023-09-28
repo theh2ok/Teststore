@@ -629,11 +629,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1448201525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d2b70eed3b9cdd448779679a868bb0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dcb94d2d008c1f41bcf00dd3c5c081c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 500
   mygold: {fileID: 1850377169}
+  InitialGold: 500
 --- !u!1 &1463601913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4608953683276077304, guid: 433cabecea2cc744995058bb8a6349e4,

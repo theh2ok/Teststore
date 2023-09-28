@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: e8c77b7edfae6fc4a9944db54db83a81, type: 3}
   buyprice: 400
-  sellprice: 90
+  Sellprice: 30
   Ownned: 0
