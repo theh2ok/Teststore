@@ -18,12 +18,12 @@ public class SkinPlayer : MonoBehaviour
     public string names;
     public enum typeparts
     {
-            head,
-            sholder,
-            weapon,
-            legs,
-            chest,
-            boots
+            head,//1
+            sholder,//2
+            weapon,//3
+            legs,//4
+            chest,//5
+            boots//6
     }
   public static  typeparts myparts;
     private void UpdateSkin()
@@ -41,6 +41,14 @@ public class SkinPlayer : MonoBehaviour
     private void Start()
     {
         UpdateSkin();
+    }
+    private void OnEnable()
+    {
+        Aciones.ItemUpdate += UpdatePart;
+    }
+    private void OnDisable()
+    {
+        Aciones.ItemUpdate -= UpdatePart;
     }
     [ContextMenu("changeskin")]
     public void updateSet()

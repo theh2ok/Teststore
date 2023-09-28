@@ -63,6 +63,7 @@ public class ItemInfo : MonoBehaviour
             PlayerManager.gold += myscritable.Sellprice;
             Aciones.Globalgold();
             myscritable.Ownned = false;
+            Aciones.ItemUpdate(myscritable.myIDPart, 0);
             ItemUIUpdate();
    
     }

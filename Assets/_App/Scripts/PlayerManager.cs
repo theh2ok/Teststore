@@ -14,6 +14,10 @@ public class PlayerManager : MonoBehaviour
     {
         Aciones.Globalgold += UPdateGold;
     }
+    private void OnDisable()
+    {
+        Aciones.Globalgold -= UPdateGold;
+    }
     private void Start()
     {
         gold = InitialGold;

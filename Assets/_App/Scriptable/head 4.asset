@@ -15,4 +15,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: e8c77b7edfae6fc4a9944db54db83a81, type: 3}
   buyprice: 400
   Sellprice: 30
+  myIDPart: 1
+  ID: 4
   Ownned: 0
