@@ -27,6 +27,7 @@ public class StoreElements : MonoBehaviour
     void Start()
     {
         generatedItem();
+        Menushead();
     }
     private void OnEnable()
     {

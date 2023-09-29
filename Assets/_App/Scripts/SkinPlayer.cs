@@ -16,6 +16,8 @@ public class SkinPlayer : MonoBehaviour
     public SpriteRenderer boots1;
     public SpriteRenderer boots2;
     public string names;
+    Animator myanim;
+    //this code was to refactorio 
     public enum typeparts
     {
             head,//1
@@ -41,10 +43,12 @@ public class SkinPlayer : MonoBehaviour
     private void Start()
     {
         UpdateSkin();
+        myanim = GetComponent<Animator>();
     }
     private void OnEnable()
     {
         Aciones.ItemUpdate += UpdatePart;
+      
     }
     private void OnDisable()
     {
@@ -69,6 +73,7 @@ public class SkinPlayer : MonoBehaviour
     }
     public void UpdatePart(int IDpart,int IDOrderItem)
     {
+        myanim.SetTrigger("atack");
         switch (IDpart)
         {
             case 1:
